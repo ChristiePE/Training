@@ -19,9 +19,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "3.0.0",
+      "sem_ver" : "4.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "519616145cd1506f8ac6531293b9a526",
+      "MD5-CAM-1.0.1" : "223708c374f9fc98e7247c1a2e284d9c",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -248,6 +248,15 @@
         "@type" : "C_ARCHETYPE_ROOT",
         "rmTypeName" : "OBSERVATION",
         "occurrences" : "0..1",
+        "nodeId" : "at0.17",
+        "attributes" : [ ],
+        "attributeTuples" : [ ],
+        "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-body_segment_length-001.v1",
+        "referenceType" : "archetypeOverlay"
+      }, {
+        "@type" : "C_ARCHETYPE_ROOT",
+        "rmTypeName" : "OBSERVATION",
+        "occurrences" : "0..1",
         "nodeId" : "at0.4",
         "attributes" : [ ],
         "attributeTuples" : [ ],
@@ -261,15 +270,6 @@
         "attributes" : [ ],
         "attributeTuples" : [ ],
         "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-body_mass_index-001.v2",
-        "referenceType" : "archetypeOverlay"
-      }, {
-        "@type" : "C_ARCHETYPE_ROOT",
-        "rmTypeName" : "OBSERVATION",
-        "occurrences" : "0..1",
-        "nodeId" : "at0.15",
-        "attributes" : [ ],
-        "attributeTuples" : [ ],
-        "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-body_segment_length-001.v1",
         "referenceType" : "archetypeOverlay"
       }, {
         "@type" : "C_ARCHETYPE_ROOT",
@@ -2491,7 +2491,23 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "E62D896E2577FA727C75A9EFFD7CA63E"
       },
-      "details" : { }
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record additional composition metadata aligned with IHE-XDS which is not already available from the Reference Model COMPOSITION class.",
+          "keywords" : [ "Document, metadata", "IHE", "XDS" ],
+          "use" : "Use to add IHE-XDS aligned metadata to a COMPOSITION.context, which along with existing COMPOSITION attributes, allows the composition to be registered in an IHE-XDS environment.",
+          "copyright" : "© Apperta Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.xds_metadata.v0",
     "differential" : true,
@@ -2503,7 +2519,81 @@
       "@type" : "C_COMPLEX_OBJECT",
       "rmTypeName" : "CLUSTER",
       "nodeId" : "at0000.1",
-      "attributes" : [ ],
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0001.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0002.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0004.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0007.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0009.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0011.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0010.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_MULTIMEDIA",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "media_type",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "1..1",
+                  "terminologyId" : {
+                    "value" : "openEHR"
+                  },
+                  "constraint" : [ "406", "407", "408", "414", "415", "416", "417", "418", "419", "420", "421", "422", "423", "424", "427", "429", "517", "518", "387", "388", "389", "390", "391", "392", "393", "394", "395", "396", "397", "398", "399", "400", "409", "410", "411", "412", "413", "401", "402", "404", "405", "519", "637", "682", "683" ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
       "attributeTuples" : [ ]
     },
     "terminology" : {
@@ -2542,7 +2632,69 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "7CD5D4B56F1AAC4BF3DFF1AB6120FCD0"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Um die Aufzeichnung oder den Austausch einer expliziten Aussage eines Arztes zu ermöglichen, dass bestimmte Gesundheitsinformationen zum Zeitpunkt der Erfassung nicht für die Dokumentation in der Krankenakte oder einem Aktenauszug zur Verfügung stehen.",
+          "keywords" : [ "Abwesenheit", "Fehlen", "Nichtvorhandensein", "Information", "Auskunft", "unerwünscht", "Nebenwirkung", "Problem", "Diagnose", "Medikament", "Verfahren", "Schutzimpfung", "Impfung" ],
+          "use" : "Um die Aufzeichnung oder den Austausch einer Aussage eines Arztes zu ermöglichen, dass bestimmte Gesundheitsinformationen zum Zeitpunkt der Erfassung nicht für die Dokumentation in der Krankenakte oder einem Aktenauszug zur Verfügung stehen. \r\n\r\nDieser Datensatz ist die 3. Komponente einer Familie von Aussagen - Aussagen über das sichere Vorhandensein von Informationen, Aussagen über den expliziten Ausschluss von z.B. Krankheiten oder Medikamenteneinnahmen und Aussagen über die Abwesenheit bezüglich z.B. einer Erkrankung oder Medikamenteneinnahme:\r\n-Aussagen über vorhandene Informationen bedeuten, dass die entsprechenden Einträge in der Krankenakte oder in einem Auszug daraus vorliegen - zum Beispiel: EVALUATION.adverse_reaction kann aussagen, dass der Patient eine Allergie gegen Penicillin hat oder EVALUATION.problem_diagnosis kann aussagen, dass der Patient an Diabetes erkrankt ist.\r\n-Äquivalent können über z.B. nicht vorliegende Erkrankungen oder Medikamenteneinnahmen Aussagen getroffen werden. Sie geben an, dass keine entprechende Dokumentation in der Krankenakte oder einem Auszug daraus vorliegt - zum Beispiel: EVALUATION.exclusion_adverse kann aussagen, dass der Patient keine Allergie gegen Penicillin hat oder EVALUATION.exclusion_problem_diagnosis kann aussagen, dass der Patient nicht an Diabetes erkrankt ist; und;\r\n- In diesem Zusammenhang kann EVALUATION.absence genutzt werden, um auszudrücken, dass keine Informationen über ein Vorliegen einer Penicillin Allergie oder einer Diabetes Erkrankung des Patienten vorhanden sind - es ist nicht bekannt, ob z.B. eine Allergie vorliegt oder diese Allergie ausgeschlossen werden kann, da keine Informationen darüber zur Verfügung stehen.\r\n\r\nDieser Archetyp wurde z.B. für die Erstellung eines Arztbriefes entwickelt. Der Empfänger dieses Dokuments kann die vorhandenen Informationen klar und eindeutig verstehen - welche Angaben liegen vor, was ist ausgeschlossen und welche Informationen sind nicht vorhanden. \r\n\r\nDieser Archetyp ist dazu vorgesehen, innerhalb von SLOTS in fortbestehenden COMPOSITIONS wie z.B. \"Therapiemaßnahmen\", \"Medikamentenliste\" oder \"Nebenwirkungsliste\" verwendet zu werden. Die Dokumentation soll ebenso erfolgen, wie bei der Aufnahme einer Allergie oder einer Diagnose durch den Arzt. Dabei soll es jedoch eine Abgrenzung gegenüber der technischen Verwendung eines \"Null Flavor\" Standards geben. \r\n\r\nDie Aussagen über fehlende Informationen können nur zum Zeitpunkt der Dokumentation als aktuell und korrekt angesehen werden. \r\n\r\nDie Archetypen dieser Familie ermöglichen es auf \"Flags\", beispielsweise zum Ausdrücken von Negationen, zu verzichten.",
+          "misuse" : "Nicht zur Dokumentation von Nebenwirkungen, Medikamenteneinnahmen, Verfahren, Problemen oder Diagnosen entwickelt - für diesen Zweck bitte die dafür vorgesehenen Archetypen verwenden.\r\n\r\nNicht zur Dokumentation von ausgeschlossenen Nebenwirkungen, Medikamenteneinnahmen, Verfahren, Problemen oder Diagnosen entwickelt - für diesen Zweck bitte die Spezialisierungen des Archetyps EVALUATION.exclusion verwenden.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "pt-br" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-br"
+          },
+          "purpose" : "Para permitir o registro ou mudança de uma declaração explícita por um clínico que especificou que informações de saúde não estão disponíveis para inclusão no registro de saúde ou para registrar sua extração no momento do registro.",
+          "keywords" : [ "ausência", "informação", "adversa", "reação", "problema", "diagnóstico", "medicação", "procedimento", "vacinação", "reação adversa" ],
+          "use" : "Utilizar para permitir o registro ou mudança de uma declaração explícita de um sistema de informação especificado que não está disponível para inclusão no prontuário médico ou fragmento no momento do registro.\r\n\r\nEsta declaração é o terceiro componente de uma família de declarações - declarações de presença positiva, declarações de exclusão positiva e declarações de ausência:\r\n- Declarações de presença positiva indicam que há uma informação de saúde relevante no relato ou fragmento - por exemplo, EVALUATION.adverse_reaction afirmando que o paciente tem alergia a penicilina ou EVALUATION.problem_diagnosis afirmando que o paciente tem diabetes. \r\n- Declarações equivalentes sobre exclusão são usadas para indicar que é conhecido que não há informação de saúde relevante no relato de saúde ou extrato deste - por exemplo, EVALUATION.exclusion_adverse afirmando que o paciente nao tem alergia conhecida a penicilina ou EVALUATION.exclusion_problem_diagnosis afirmando que o paciente não é diabético; e;\r\n- Neste contexto, o EVALUATION.absence pode ser utilizado para registrar que não há informação de saúde disponível sobre alergia a penicilina ou diagnóstico de diabetes - não se sabe se é presente ou excluído, mas não há informação a ser disponibilizada. \r\n\r\nEste arquétipo foi desenvolvido especificamete para o caso de uso em que o clínico está preparando uma parte de um relatório de saúde, então o receptor tem uma compreensão explícita e não ambígua da informação disponível - que se está presente, excluida ou não disponível. É intenção primária que seja utilizado com SLOTS em COMPOSITIONS persistentes como 'Precauções terapêuticas', 'Lista de medicações', 'Lista de problemas' ou 'Lista de reações adversas'. É também pretendido deliberadamente que seja declaração feita por clínico da mesma maneira que ele registra qualquer alergia ou diagnóstico, e é pretendido que seja bem diferente do uso técnico de dados com valores nulos.\r\n\r\nDeclarações de ausência somente podem ser consideradas correntes a acuradas no momento do registro.\r\n\r\nEste arquétipo foi projetado especificamente para evitar a necessidade de usar flags para expressar negação em qualquer entrada no relato de saúde.",
+          "misuse" : "Não deve ser utilizado para registrar a presença ou ausência de reações adversas, uso de medicações, procedimentos, problemas ou diagnósticos - usar arquétipos específicos para estas finalidades.\r\n\r\nNão dever ser utilizado para registrar a exclusão de reações adversas, uso de medicações, procedimentos, problemas ou diagnósticos - utilizar especializações específicas do arquétipo EVALUATION.exclusion para esta finalidade.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To enable recording or exchange of an explicit statement by a clinician that specified health information is not available for inclusion in the health record or record extract at the time of recording.",
+          "keywords" : [ "absence", "information", "adverse", "reaction", "problem", "diagnosis", "medication", "procedure", "vaccination", "adverse reaction" ],
+          "use" : "Use to enable recording or exchange of an explicit statement that specified health information is not available for inclusion in the health record or record extract at the time of recording. \r\n\r\nThis statement is the third component of a family of statements - statements of positive presence, statements of positive exclusion and statements of absence:\r\n- Statements of positive presence indicate that there is relevant health information in the record or extract - for example, EVALUATION.adverse_reaction stating that the patient has an allergy to penicillin or EVALUATION.problem_diagnosis stating that the patient has diabetes. \r\n- Equivalent statements about exclusion are used to indicate that it is known that there is no relevant health information in the health record or extract - for example, EVALUATION.exclusion_adverse  stating that the patient does not have a known allergy to penicillin or EVALUATION.exclusion_problem_diagnosis stating that the patient is not diabetic; and;\r\n- In this context, the EVALUATION.absence could be used to record that there is no health information available about penicillin allergy or the diagnosis of diabetes - it is not known if it is present or excluded, but there is no information that can be provided. \r\n\r\nThis archetype has been developed specifically for the use case where a clinician is preparing an extract from a health record, so that the receiver has explicit and unambiguous understanding of the information available - that which is present, excluded or just not available. It is primarily intended to be used within SLOTS in persistent COMPOSITIONS such as 'Therapeutic precautions', 'Medication list', 'Problem list', or 'Adverse reaction list'. It is also deliberately intended to be statement made by a clinician in the same way that they would record any allergies or diagnoses, and is intended to be quite different to technical use of null flavours in data.\r\n\r\nAbsence statements can only be considered to be current and accurate at the time of recording.\r\n\r\nThis archetype has been designed specifically to avoid the need to use of flags to express negation about any entry within the health record.",
+          "misuse" : "Not to be used to record the presence of adverse reactions, medication use, procedures, problems or diagnoses - use specific archetypes for this purpose.\r\n\r\nNot to be used to record the exclusion of adverse reactions, medication use, procedures, problems or diagnoses - use specific specialisations of the EVALUATION.exclusion archetype for this purpose.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "purpose" : "*To enable recording or exchange of an explicit statement by a clinician that specified health information is not available for inclusion in the health record or record extract at the time of recording.(en)",
+          "keywords" : [ "absence", "information", "négatif", "réaction", "problème", "diagnostic", "médicament", "procédure", "vaccination", "réaction indésirable" ],
+          "use" : "*Use to enable recording or exchange of an explicit statement that specified health information is not available for inclusion in the health record or record extract at the time of recording. \r\n\r\nThis statement is the third component of a family of statements - statements of positive presence, statements of positive exclusion and statements of absence:\r\n- Statements of positive presence indicate that there is relevant health information in the record or extract - for example, EVALUATION.adverse_reaction stating that the patient has an allergy to penicillin or EVALUATION.problem_diagnosis stating that the patient has diabetes. \r\n- Equivalent statements about exclusion are used to indicate that it is known that there is no relevant health information in the health record or extract - for example, EVALUATION.exclusion_adverse  stating that the patient does not have a known allergy to penicillin or EVALUATION.exclusion_problem_diagnosis stating that the patient is not diabetic; and;\r\n- In this context, the EVALUATION.absence could be used to record that there is no health information available about penicillin allergy or the diagnosis of diabetes - it is not known if it is present or excluded, but there is no information that can be provided. \r\n\r\nThis archetype has been developed specifically for the use case where a clinician is preparing an extract from a health record, so that the receiver has explicit and unambiguous understanding of the information available - that which is present, excluded or just not available. It is primarily intended to be used within SLOTS in persistent COMPOSITIONS such as 'Therapeutic precautions', 'Medication list', 'Problem list', or 'Adverse reaction list'. It is also deliberately intended to be statement made by a clinician in the same way that they would record any allergies or diagnoses, and is intended to be quite different to technical use of null flavours in data.\r\n\r\nAbsence statements can only be considered to be current and accurate at the time of recording.\r\n\r\nThis archetype has been designed specifically to avoid the need to use of flags to express negation about any entry within the health record.(en)",
+          "misuse" : "*Not to be used to record the presence of adverse reactions, medication use, procedures, problems or diagnoses - use specific archetypes for this purpose.\r\n\r\nNot to be used to record the exclusion of adverse reactions, medication use, procedures, problems or diagnoses - use specific specialisations of the EVALUATION.exclusion archetype for this purpose.(en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-EVALUATION.absence.v2",
     "differential" : true,
@@ -2637,7 +2789,54 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "330A4816E3F831C82CCFB8C96F226918"
       },
-      "details" : { }
+      "details" : {
+        "sv" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sv"
+          },
+          "purpose" : "Att mäta avståndet mellan två ytanatomiska punkter.",
+          "keywords" : [ "antropometri", "mätning", "längd", "höjd", "bredd", "spann", "kroppssegment" ],
+          "use" : "Används för att mäta avståndet mellan två ytanatomiska punkter. \r\n\r\nMätningar av kroppssegment som ofta förekommer vid kartläggning av tillväxtsmönster hos barn har modellerats som separata arketyper. Avsikten med denna arketyp är att använda ett gemensamt förfarande för mätningar av flera olika kroppssegment, registrerade med dataelementet \"Benämning på kroppssegment\". På så vis undviks onödigt skapande av flera arketyper för respektive mätning. \r\n\r\nMätningar av detta slag kan registreras och observeras över tid. Till exempel för att övervaka barns tillväxt eller för att förse kliniska, antropometriska eller ergonomiska bedömningar med exempelvis kroppens form och proportioner. Arketypen kan även användas för att urskilja abnormala kliniska fynd vid uppföljning av sjukdomsprocess. \r\n\r\nParametrar vars avstånd mellan två punkter vanligen mäts, är tillagda som datatyp DV_CODED_TEXT i dataelementet \"Benämning på kroppssegment\". Vartefter ytterligare parametrar identifieras, kan dessa tilläggas i samma lista.",
+          "misuse" : "Ska inte användas för att registrera mätningar för kroppssegment som har modellerats som separata arketyper. Dessa inkluderar bland annat: \r\n-för huvudomfång, använd OBSERVATION.head_circumference;\r\n-för höftomfång, använd OBSERVATION.hip_circumference;\r\n-för midjemått, använd OBSERVATION.waist_circumference; och\r\n-för bröstkorgsomfång, använd OBSERVATION.chest_circumference.\r\n\r\nSka inte användas för att registrera omkretsen för ett kroppssegment. Använd i stället OBSERVATION.body_segment_circumference.\r\n\r\nSka inte användas för att registrera dimensionerna för ett inre kroppsorgan eller lesion.\r\n\r\nSka inte användas för att registrera mätningar för hudveck. Använd i stället specifika arketyper. \r\n\r\nSka inte användas för att registrera Crown-rump length för ett foster med hjälp av bildteknik.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere måling av avstanden mellom to definerte punkter på kroppsoverflaten.",
+          "keywords" : [ "antropometri", "måling", "lengde", "høyde", "bredde", "avstand", "spenn" ],
+          "use" : "Brukes for å registrere måling av avstanden mellom to definerte punkter på kroppsoverflaten.\r\n\r\nAntropometriske målinger som er vanlige, og ofte er brukt som en del av vekstdiagrammer i barndommen, er modellert som egne arketyper. Hensikten med denne arketypen er å tilby en standard måte å registrere en eller alle mulige målinger mellom to identifiserte punkter på kroppen, identifisert av dataelementelementet \"Kroppsdel\", heller enn å lage en egen/ separat arketype for alle mulige målinger.\r\n\r\nDenne målingen kan registreres og følges over tid, for eksempel å følge utvikling av et barns vekst, eller for å gi innblikk i formen og proporsjonene av et individs kropp i en klinisk, antropometrisk eller ergonomisk vurdering. Man kan også følge utviklingen av en tilstand eller sykdom ved å registrere målinger av unormale kliniske funn eller observasjoner i denne arketypen.\r\n\r\nDe vanligste parametrene som blir målt mellom to definerte punkter er lagt til DV_CODED_TEXT-datatype i elementet \"Kroppsdel\". Når behovet flere målinger blir identifisert kan disse etter hvert bli lagt til listen.",
+          "misuse" : "Brukes ikke til å registrere allment utbredte kliniske målinger, som har sine egne spesifikke arketyper, for eksempel:\r\n\r\n- bruk OBSERVATION.height (Høyde/lengde) for for å måle en persons høyde eller lengde.\r\n- bruk OBSERVATION.head_circumference (Hodeomkrets) for å måle hodeomkrets.\r\n- bruk OBSERVATION.waist_circumference (Midjeomkrets) for å måle midjeomkrets.\r\n- bruk OBSERVATION.hip_circumference (Hofteomkrets) for å måle hofteomkrets.\r\n- bruk OBSERVATION.chest_circumference for å måle brystomkrets.\r\n\r\nSkal ikke brukes for å registrere omkretsen av en kroppsdel eller del av en kroppsdel. Bruk OBSERVATION.body_segment_circumference (Kroppsmåling - omkrets) for dette.\r\n\r\nSkal ikke brukes til å registrere areal av kroppsegmenter, bruk arketypen OBSERVATION.body_segment_area (Kroppsmåling - areal) for dette formålet.\r\n\r\nSkal ikke brukes til å registrere dimensjonene på et indre organ eller en lesjon/skade.\r\n\r\nSkal ikke brukes til å registrere målinger av hudfolder - bruk arketyper spesifikke for dette formålet.\r\n\r\nSkal ikke brukes til å registrere Isse - sete lengde på foster når det er brukt bildedannende utstyr.\r\n\r\nBrukes ikke for å registrere måling av sideforskjell i lengde mellom parvise kroppsegmenter. Bruk arketypen OBSERVATION.body_segment_length_discrepancy for dette formålet.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record the measurement of the distance between two points of surface anatomy.",
+          "keywords" : [ "anthropometry", "measurement", "length", "height", "width", "span" ],
+          "use" : "Use to record the measurement of the distance between two points of surface anatomy.\r\n\r\nBody segment measurements that are ubiquitous and, most commonly, used as part of growth charting in childhood have been modelled as unique and discrete archetypes. Rather than create an archetype for every single possible body segment measurement, the intent of this archetype is to use a common recording pattern to capture any, or all, other possible measurements between two identified body points, identified by the 'Body segment name' data element.\r\n\r\nThis measurement may be recorded and tracked over time, for example tracking child growth parameters, or used to provide insight into the shape and proportions of an individual's body for purposes of clinical, anthropometric or ergonomic assessment. It may also be used to record the measurement of abnormal clinical findings or observations in order to track the progress of a condition or disease.\r\n\r\nCommon parameters that are measured between two identified points have been added to the DV_CODED_TEXT data type in the 'Body segment name' data element. As further parameters are identified, these can be added to this list over time.",
+          "misuse" : "Not to be used to record common body segment measurements that have been modelled as separate archetypes, including, but not limited to:\r\n- for Head circumference - use OBSERVATION.head_circumference;\r\n- for Hip circumference - use OBSERVATION.hip_circumference;\r\n- for Waist circumference - use OBSERVATION.waist_circumference; and\r\n- for Chest circumference - use OBSERVATION.chest_circumference.\r\n\r\nNot to be used to record the circumference of a body segment - use OBSERVATION.body_segment_circumference for this purpose.\r\n\r\nNot to be used to record the area of a body segment - use OBSERVATION.body_segment_area for this purpose.\r\n\r\nNot to be used to record the dimensions of an internal body organ or a lesion.\r\n\r\nNot to be used to record skinfold measurements - use archetypes that are specific for this purpose.\r\n\r\nNot to be used to measure the Crown-rump length for a fetus, using imaging technology.\r\n\r\nNot to be used to record the measurement of the difference in length between paired body segments. Use the OBSERVATION.body_segment_length_discrepancy archetype for this purpose.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.body_segment_length.v1",
     "differential" : true,
@@ -2670,7 +2869,46 @@
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "ITEM_TREE",
                   "nodeId" : "at0003.1",
-                  "attributes" : [ ],
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "items",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0005.1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "CODE_PHRASE",
+                              "occurrences" : "1..1",
+                              "terminologyId" : {
+                                "value" : "local"
+                              },
+                              "constraint" : [ "at0006", "at0007" ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0009.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
                   "attributeTuples" : [ ]
                 } ]
               }, {
@@ -2680,7 +2918,51 @@
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "ITEM_TREE",
                   "nodeId" : "at0010.1",
-                  "attributes" : [ ],
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "items",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0011.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0031.1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "CODE_PHRASE",
+                              "occurrences" : "1..1",
+                              "terminologyId" : {
+                                "value" : "local"
+                              },
+                              "constraint" : [ "at0036", "at0037", "at0039" ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_TEXT",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
                   "attributeTuples" : [ ]
                 } ]
               } ],
@@ -2688,29 +2970,9 @@
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "INTERVAL_EVENT",
-              "nodeId" : "at0012",
+              "occurrences" : "0..0",
+              "nodeId" : "at0012.1",
               "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "math_function",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_CODED_TEXT",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "defining_code",
-                    "children" : [ {
-                      "@type" : "C_TERMINOLOGY_CODE",
-                      "rmTypeName" : "CODE_PHRASE",
-                      "occurrences" : "1..1",
-                      "terminologyId" : {
-                        "value" : "openehr"
-                      },
-                      "constraint" : [ "146" ]
-                    } ]
-                  } ],
-                  "attributeTuples" : [ ]
-                } ]
-              }, {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "data",
                 "children" : [ {
@@ -2718,7 +2980,46 @@
                   "rmTypeName" : "ITEM_TREE",
                   "nodeId" : "at0003.2",
                   "targetPath" : "/data[at0001]/events[at0002]/data[at0003.1]",
-                  "attributes" : [ ],
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "items",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0005.2",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "CODE_PHRASE",
+                              "occurrences" : "1..1",
+                              "terminologyId" : {
+                                "value" : "local"
+                              },
+                              "constraint" : [ "at0006", "at0007" ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0009.2",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
                   "attributeTuples" : [ ]
                 } ]
               }, {
@@ -2729,10 +3030,109 @@
                   "rmTypeName" : "ITEM_TREE",
                   "nodeId" : "at0010.2",
                   "targetPath" : "/data[at0001]/events[at0002]/state[at0010.1]",
-                  "attributes" : [ ],
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "items",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0011.2",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0031.2",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "CODE_PHRASE",
+                              "occurrences" : "1..1",
+                              "terminologyId" : {
+                                "value" : "local"
+                              },
+                              "constraint" : [ "at0036", "at0037", "at0039" ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_TEXT",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              }, {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "math_function",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "terminologyId" : {
+                        "value" : "openehr"
+                      },
+                      "constraint" : [ "146" ]
+                    } ]
+                  } ],
                   "attributeTuples" : [ ]
                 } ]
               } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      }, {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "protocol",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0014",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "items",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0027.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0029.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0033.1",
+              "attributes" : [ ],
               "attributeTuples" : [ ]
             } ]
           } ],
