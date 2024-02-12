@@ -19,9 +19,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.0",
+      "sem_ver" : "1.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "b89d6210338726df586c884c641cf1c6",
+      "MD5-CAM-1.0.1" : "c806f9ef56dbf5af5c1a87b99e485afa",
       "PARENT:MD5-CAM-1.0.1" : "8F3156560D39B12C8362DF26A4C575BD"
     },
     "details" : {
@@ -403,7 +403,7 @@
                   "terminologyId" : {
                     "value" : "local"
                   },
-                  "constraint" : [ "ac0.5" ],
+                  "constraint" : [ "ac0.8" ],
                   "selectedTerminologies" : [ ]
                 } ]
               } ],
@@ -439,10 +439,10 @@
       "conceptCode" : "at0000",
       "termDefinitions" : {
         "en" : {
-          "ac0.5" : {
+          "ac0.8" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
-            "code" : "ac0.5",
+            "code" : "ac0.8",
             "description" : ""
           }
         }
@@ -473,6 +473,21 @@
         "ac0.5" : {
           "@type" : "VALUE_SET",
           "id" : "ac0.5",
+          "members" : [ "at0007", "at0008" ]
+        },
+        "ac0.6" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.6",
+          "members" : [ "at0007", "at0008" ]
+        },
+        "ac0.7" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.7",
+          "members" : [ "at0007", "at0008" ]
+        },
+        "ac0.8" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.8",
           "members" : [ "at0007", "at0008" ]
         }
       }
