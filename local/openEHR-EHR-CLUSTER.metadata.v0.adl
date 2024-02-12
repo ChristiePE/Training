@@ -23,14 +23,14 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"d53881f061f90c82e94adbbb277d9034">
 		["build_uid"] = <"88e1b729-a894-3a2a-ac2a-2e8b7ec0768f">
-		["MD5-CAM-1.0.1"] = <"0cd6c7720f53b23587fd569cc5fe81a0">
 	>
 
 definition
 	CLUSTER[at0000] matches {    -- Metadata
 		items cardinality matches {1..*; unordered} matches {
-			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Group
+			ELEMENT[at0001] occurrences matches {1..*} matches {    -- Group
 				value matches {
 					DV_CODED_TEXT matches {
 						defining_code matches {
@@ -40,13 +40,16 @@ definition
 						}
 					}
 				}
+				name matches {
+					DV_CODED_TEXT matches {*}
+				}
 			}
-			ELEMENT[at0003] occurrences matches {0..1} matches {    -- ShouldDisplay
+			ELEMENT[at0003] matches {    -- ShouldDisplay
 				value matches {
 					DV_BOOLEAN matches {*}
 				}
 			}
-			ELEMENT[at0004] occurrences matches {0..1} matches {    -- DisplayName
+			ELEMENT[at0004] matches {    -- DisplayName
 				value matches {
 					DV_TEXT matches {*}
 				}
