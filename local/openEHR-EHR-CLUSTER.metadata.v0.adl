@@ -1,0 +1,87 @@
+archetype (adl_version=1.4; uid=5ce41f6c-b0b1-468f-86ed-81c92d98578a)
+	openEHR-EHR-CLUSTER.metadata.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2024-02-12">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["build_uid"] = <"88e1b729-a894-3a2a-ac2a-2e8b7ec0768f">
+		["MD5-CAM-1.0.1"] = <"0cd6c7720f53b23587fd569cc5fe81a0">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- Metadata
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Group
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0007,    -- Test Group 1
+							at0008]    -- Test Group 2
+						}
+					}
+				}
+			}
+			ELEMENT[at0003] occurrences matches {0..1} matches {    -- ShouldDisplay
+				value matches {
+					DV_BOOLEAN matches {*}
+				}
+			}
+			ELEMENT[at0004] occurrences matches {0..1} matches {    -- DisplayName
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Metadata">
+					description = <"MetaData">
+				>
+				["at0001"] = <
+					text = <"Group">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"ShouldDisplay">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"DisplayName">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Test Group 1">
+					description = <"Group 1 for testing">
+				>
+				["at0008"] = <
+					text = <"Test Group 2">
+					description = <"Testing for group 2">
+				>
+			>
+		>
+	>
